@@ -1,0 +1,141 @@
+.padding {
+  padding: 1rem;
+}
+
+table {
+  margin: auto;
+  table-layout: fixed;
+  width: 90%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  transition: background-color 0.5s ease;
+
+  thead {
+    tr {
+      &:first-child {
+        background-color: darkblue;
+        color: white;
+
+        th {
+          &:first-child {
+            text-align: left;
+          }
+
+          &:last-child {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  th,
+  td {
+    margin: 10px;
+    padding: 0.5rem;
+    height: 30px;
+    text-align: center;
+    width: 30%;
+
+    &:first-child {
+      width: 30%;
+
+      input {
+        width: auto;
+        text-align: left;
+      }
+    }
+
+    &:last-child {
+      width: 10%;
+      text-align: right;
+    }
+
+    input {
+      width: 30%;
+      text-align: center;
+      background-color: inherit;
+      font-size: 1rem;
+      padding: 5px;
+      margin: 0;
+      border: 0;
+      border-radius: 5px;
+
+      &:hover {
+        color: white;
+        background-color: darkblue;
+      }
+    }
+  }
+}
+
+.tr {
+  background-color: white;
+  display: "table";
+  // display: ${({ isDragging }) => (isDragging ? "table" : "")};
+}
+
+.add-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.trash-can-icon {
+  position: absolute;
+  top: -20px;
+  right: -50px;
+  cursor: pointer;
+  padding: 15px;
+  display: none;
+
+  tr:hover & {
+    display: inline;
+    // display: ${({ isSomethingDragging }) =>
+      // isSomethingDragging ? "none" : "inline"};
+  }
+}
+
+.up-down-arrow-icon {
+  position: absolute;
+  top: -15px;
+  left: -50px;
+  padding: 15px;
+  display: none;
+
+  tr:hover & {
+    display: inline;
+    // display: ${({ isSomethingDragging }) =>
+      // isSomethingDragging ? "none" : "inline"};
+  }
+}
+
+.add-item-button {
+  cursor: pointer;
+  color: white;
+  margin: 0 10px;
+}
+
+.reset-data-button {
+  cursor: pointer;
+  color: white;
+  margin: 0 10px;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.sum {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.white{
+  background-color:"white"
+}
